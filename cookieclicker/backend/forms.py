@@ -36,7 +36,7 @@ class UserForm(forms.ModelForm):
             return cleaned_data
         raise forms.ValidationError('Passwords not equals each other~!<3')
 
-    def safe(self, commit=True):
+    def save(self, commit=True):
         user = super().save(commit=False)
         password = self.cleaned_data['password']
         user.set_password(password)
