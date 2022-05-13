@@ -27,6 +27,7 @@ class UserForm(forms.ModelForm):
         widget=forms.PasswordInput(attrs={'placeholder': 'Repeat password'}),
     )
 
+    # change base methods
     def clean(self):
         cleaned_data = self.cleaned_data
         password = cleaned_data.get('password')

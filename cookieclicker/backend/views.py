@@ -4,7 +4,7 @@ from .forms import UserForm
 from django.contrib.auth import login, logout, authenticate
 
 
-@login_required
+@login_required # For reg users view index.html
 def index(request):
     return render(request, 'index.html')
 
