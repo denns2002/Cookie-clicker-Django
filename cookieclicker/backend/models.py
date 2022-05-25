@@ -9,3 +9,8 @@ class Core(models.Model):
     coins = models.IntegerField(default=0)
     click_power = models.IntegerField(default=1)
 
+    def click(self, commit=True):
+        self.coins += self.click_power
+        if commit:
+            self.save()
+        return self.coins
