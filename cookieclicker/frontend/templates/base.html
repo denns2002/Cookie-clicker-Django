@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<html lang="ru">
+<head>
+    <title>Лучший кликер на планете</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<body>
+    <nav class="nav">
+        Привет, {{ user.username }}
+        <a href="{% url 'logout' %}">Выйти</a>
+    </nav>
+
+    <div class="container">
+        <div id='coins'>{{core.coins}}</div>
+        <button onclick="call_click()">Нажми меня</button>
+        <p>
+            Невероятная мощь клика: <span id="click_power">{{ core.click_power }}</span>
+        </p>
+    </div>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
