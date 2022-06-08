@@ -1,17 +1,29 @@
 {% extends "base.html" %}
+{% block body %}
 {% load static %}
-{% block content %}
-<html lang="ru">
-<head>
-    <script type="text/javascript" src="{% static 'js/index.js' %}"></script>
-</head>
 <body>
-    <main class="app">
+    <main class="app" align="center">
+        <nav class="nav">
+            Hi, {{ user.username }}!
+            <a href="{% url 'logout' %}">Выйти</a>
+        </nav>
+
+        <div class="container">
+            <div id='coins'>{{core.coins}}</div>
+            <a onclick="call_click()"><img id="btn-img" src="{% static 'img/btn-img.png' %}"></a>
+            <p>
+                Мощь клика: <span id="click_power">{{ core.click_power }}</span>
+            </p>
+            <p>
+                Кукисов в сек: <span id="auto_click_power">{{ core.auto_click_power }}</span>
+            </p>
+        </div>
+
         <aside class="boosts" id="boosts">
             <h3>BOOSTS</h3>
             <div class="boosts-holder" id="boosts-holder">
                 {% for boost in boosts %}
-                    <button class="boost" id="boost_{{boost.id}}" onclick="buy_boost({{boost.id}})">
+                    <button class="boost_{{boost.type}}" id="boost_{{boost.id}}" onclick="buy_boost({{boost.id}})">
                         <p>lvl: <span id="boost_level">{{boost.level}}</span></p>
                         <p>+<span id="boost_power">{{boost.power}}</span></p>
                         <p><span id="boost_price">{{boost.price}}</span></p>
@@ -21,5 +33,4 @@
         </aside>
     </main>
 </body>
-</html>
 {% endblock %}

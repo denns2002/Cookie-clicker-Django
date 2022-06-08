@@ -1,0 +1,15 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+#btn-img {
+    background-color: rgba(28,28,28,0);
+    width: 150px;
+    image-rendering: pixelated;
+}
+
+#coins {
+    font-size: 30px;
+    font-weight: bold;
+}
