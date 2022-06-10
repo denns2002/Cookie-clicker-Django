@@ -71,6 +71,10 @@ function update_boost(boost) {
     boost_node.querySelector('#boost_price').innerText = boost.price
 }
 
+random = function(){
+return Math.floor(Math.random() * 30);
+}
+
 /** Функция для добавления буста на фронтике. */
 function add_boost(parent, boost) {
     const button = document.createElement('button')
@@ -78,6 +82,7 @@ function add_boost(parent, boost) {
     button.setAttribute('id', `boost_${boost.id}`)
     button.setAttribute('onclick', `buy_boost(${boost.id})`)
     button.innerHTML = `
+        <img class="mushrooms "src="/static/img/mushrooms/`+random()+`.png">
         <p>lvl: <span id="boost_level">${boost.level}</span></p>
         <p>+<span id="boost_power">${boost.power}</span></p>
         <p><span id="boost_price">${boost.price}</span></p>
@@ -216,6 +221,18 @@ function getCookie(name) {
         }
     }
     return cookieValue;
+}
+
+function show_hide_password(target){
+	var input = document.getElementById('password-input');
+	if (input.getAttribute('type') == 'password') {
+		target.classList.add('view');
+		input.setAttribute('type', 'text');
+	} else {
+		target.classList.remove('view');
+		input.setAttribute('type', 'password');
+	}
+	return false;
 }
 
 /**

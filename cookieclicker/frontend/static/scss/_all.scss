@@ -1,0 +1,52 @@
+$light-blue: #d5eafc;
+$dark-gray: #515a6e;
+$gray: #B9BDC5;
+$light-gray: #E3E4E7;
+$white: #fefefe;
+$ok: #F3544A;
+$login-f: #18FF6D;
+$login-s: #04E824;
+$reg-f: #3033FF;
+$reg-s: #1C4AE8;
+$error-shadow: rgba(255,50,50,.2);
+
+
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+@keyframes fallingleft {
+    from {
+        transform: rotate(0deg);
+        top: -10vh;
+    }
+
+    to {
+        top: 100vh;
+        transform: rotate(359deg);
+    }
+}
+
+@keyframes fallingright {
+    from {
+        transform: rotate(0deg);
+        top: -100vh;
+    }
+
+    to {
+        top: 100vh;
+        transform: rotate(-359deg);
+    }
+}
+
+@keyframes downfalling {
+    0% {
+      transform: translateY(-100vh);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }

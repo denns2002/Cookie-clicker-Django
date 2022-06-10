@@ -1,5 +1,7 @@
 from django import forms
 from django.contrib.auth.models import User
+from django.contrib.auth.password_validation import \
+    validate_password
 
 
 class UserForm(forms.ModelForm):
@@ -9,21 +11,19 @@ class UserForm(forms.ModelForm):
 
     username = forms.CharField(
         max_length=20,
-        label='Your Username',
-        widget=forms.TextInput(attrs={'placeholder': 'Enter'}),
+        label='Username',
+        widget=forms.TextInput(attrs={'placeholder': 'Username'}),
     )
 
     password = forms.CharField(
-        min_length=3,
         max_length=20,
-        label='Your Password',
-        widget=forms.PasswordInput(attrs={'placeholder': 'Enter password'}),
+        widget=forms.PasswordInput(attrs={'placeholder': 'Password'}),
+        label='Password',
     )
 
     password_confirm = forms.CharField(
-        min_length=3,
         max_length=20,
-        label='Password Confirmation',
+        label='Confirm password',
         widget=forms.PasswordInput(attrs={'placeholder': 'Repeat password'}),
     )
 
@@ -32,10 +32,13 @@ class UserForm(forms.ModelForm):
         cleaned_data = self.cleaned_data
         password = cleaned_data.get('password')
         password_confirm = cleaned_data.get('password_confirm')
+        if validate_password(password) is None:
+            if password == password_confirm:
+                return cleaned_data
+            raise forms.ValidationError('Passwords not equals!')
+        else:
+            raise forms.ValidationError('Password must meet complexity requirements')
 
-        if password == password_confirm:
-            return cleaned_data
-        raise forms.ValidationError('Passwords not equals each other~!<3')
 
     def save(self, commit=True):
         user = super().save(commit=False)

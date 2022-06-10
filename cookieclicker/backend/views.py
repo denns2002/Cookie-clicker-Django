@@ -107,7 +107,7 @@ class Register(APIView):
             core.save()
             return redirect('index')
 
-        return render(request, 'register.html', {'user_form': user_form})
+        return render(request, 'register.html', {'user_form': user_form, 'invalid': True})
 
 
 class Login(APIView):

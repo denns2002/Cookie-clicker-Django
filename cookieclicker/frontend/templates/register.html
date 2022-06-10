@@ -1,9 +1,56 @@
 {% extends "base.html" %}
+{% load static %}
 {% block body %}
-    <form action="{% url 'register' %}" method="POST">
-        {% csrf_token %}
-        {{user_form.as_p}}
-        <button type="submit"> REGISTERRRR </button>
-    </form>
-    <a href="{% url 'login' %}">Registered already?</a>
+    <link rel="stylesheet" href="{% static 'css/auth.css' %}">
+    <div id="content" class="reg">
+        <h1>Create new account</h1>
+        <form action="{% url 'register' %}" method="POST">
+            {% csrf_token %}
+            {{user_form.username}}
+            <label>Username</label>
+            {{user_form.password}}
+            <label>Password</label>
+            <a href="#" class="password-control" viewBox="0 0 20 20"></a>
+            {{user_form.password_confirm}}
+            <label>Confirm password</label>
+
+            <div id="validate">
+                <p id="length" class="invalid"><i class="fa-solid fa-xmark"></i>Minimum <b>8 characters</b></p>
+                <p id="numeric" class="invalid"><i class="fa-solid fa-xmark"></i>Contain <b>numbers</b></p>
+                <p id="non-numeric" class="invalid"><i class="fa-solid fa-xmark mark-number"></i>Contain <b>non-numeric</b> characters</p>
+                <p id="diff" class="invalid"><i class="fa-solid fa-xmark"></i><b>Difference</b> between password and username</p>
+              </div>
+
+            <button type="submit" class="btn-login reg"> Get started </button>
+        </form>
+        {% if invalid %}
+            <span><i class="fa-solid fa-xmark"></i>Password must meet complexity requirements!</span>
+        {% endif %}
+        <p><a href="{% url 'login' %}">Registered already?</a></p>
+    </div>
+
+    <div class="mushrooms">
+        <ul>
+            <li><div class="mushroom"><img src="{% static 'img/mushrooms/1.png' %}" alt="" class="img-1"></div></li>
+            <li><div class="mushroom"><img src="{% static 'img/mushrooms/2.png' %}" alt="" class="img-2"></div></li>
+            <li><div class="mushroom"><img src="{% static 'img/mushrooms/3.png' %}" alt="" class="img-3"></div></li>
+            <li><div class="mushroom"><img src="{% static 'img/mushrooms/4.png' %}" alt="" class="img-4"></div></li>
+            <li><div class="mushroom"><img src="{% static 'img/mushrooms/5.png' %}" alt="" class="img-5"></div></li>
+            <li><div class="mushroom"><img src="{% static 'img/mushrooms/6.png' %}" alt="" class="img-6"></div></li>
+            <li><div class="mushroom"><img src="{% static 'img/mushrooms/7.png' %}" alt="" class="img-7"></div></li>
+            <li><div class="mushroom"><img src="{% static 'img/mushrooms/8.png' %}" alt="" class="img-8"></div></li>
+            <li><div class="mushroom"><img src="{% static 'img/mushrooms/9.png' %}" alt="" class="img-9"></div></li>
+            <li><div class="mushroom"><img src="{% static 'img/mushrooms/10.png' %}" alt="" class="img-10"></div></li>
+            <li><div class="mushroom"><img src="{% static 'img/mushrooms/11.png' %}" alt="" class="img-11"></div></li>
+            <li><div class="mushroom"><img src="{% static 'img/mushrooms/12.png' %}" alt="" class="img-12"></div></li>
+            <li><div class="mushroom"><img src="{% static 'img/mushrooms/13.png' %}" alt="" class="img-13"></div></li>
+            <li><div class="mushroom"><img src="{% static 'img/mushrooms/14.png' %}" alt="" class="img-14"></div></li>
+            <li><div class="mushroom"><img src="{% static 'img/mushrooms/15.png' %}" alt="" class="img-15"></div></li>
+            <li><div class="mushroom"><img src="{% static 'img/mushrooms/16.png' %}" alt="" class="img-16"></div></li>
+            <li><div class="mushroom"><img src="{% static 'img/mushrooms/17.png' %}" alt="" class="img-17"></div></li>
+            <li><div class="mushroom"><img src="{% static 'img/mushrooms/18.png' %}" alt="" class="img-18"></div></li>
+            <li><div class="mushroom"><img src="{% static 'img/mushrooms/19.png' %}" alt="" class="img-19"></div></li>
+            <li><div class="mushroom"><img src="{% static 'img/mushrooms/20.png' %}" alt="" class="img-20"></div></li>
+        </ul>
+    </div>
 {% endblock %}
