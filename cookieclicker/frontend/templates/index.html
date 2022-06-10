@@ -6,33 +6,39 @@
     <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
     <main class="app" align="center">
         <nav class="nav">
-            Hi, {{ user.username }}!
-            <a href="{% url 'logout' %}">Выйти</a>
+            <p id="logout">
+                Hi, {{ user.username }}!<br>
+                <a href="{% url 'logout' %}">Logout</a>
+            </p>
         </nav>
 
         <div class="container">
             <div id='coins'>{{core.coins}}</div>
             <a onclick="call_click()"><img id="btn-img" src="{% static 'img/btn-img.png' %}"></a>
             <p>
-                Мощь клика: <span id="click_power">{{ core.click_power }}</span>
+                Click power - <span id="click_power">{{ core.click_power }}</span>
             </p>
             <p>
-                Кукисов в сек: <span id="auto_click_power">{{ core.auto_click_power }}</span>
+                Mushrooms per sec - <span id="auto_click_power">{{ core.auto_click_power }}</span>
             </p>
         </div>
 
+        <h3>BOOSTS</h3>
         <aside class="boosts" id="boosts">
-            <h3>BOOSTS</h3>
             <div class="boosts-holder" id="boosts-holder">
                 {% for boost in boosts %}
-                    <button class="boost_{{boost.type}}" id="boost_{{boost.id}}" onclick="buy_boost({{boost.id}})">
-                        <p>lvl: <span id="boost_level">{{boost.level}}</span></p>
-                        <p>+<span id="boost_power">{{boost.power}}</span></p>
-                        <p><span id="boost_price">{{boost.price}}</span></p>
-                    </button>
+                    <a href="#" class="boost_{{boost.type}}" id="boost_{{boost.id}}" onclick="buy_boost({{boost.id}})">
+                        <div class="mush-div">
+                            <img class="mushrooms" src=""><br>
+                            <p>lvl - <span id="boost_level">{{boost.level}}</span></p><br>
+                            <p><i class="fa-solid fa-plus"></i> <span id="boost_power">{{boost.power}}</span> power</p><br>
+                            <p><span id="boost_price">{{boost.price}}</span></p>
+                        </div>
+                    </a>
                 {% endfor %}
             </div>
         </aside>
     </main>
+    <img id="sky" src="{% static 'img/sky.png' %}" alt="">
 </body>
 {% endblock %}

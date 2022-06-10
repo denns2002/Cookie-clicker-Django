@@ -77,15 +77,17 @@ return Math.floor(Math.random() * 30);
 
 /** Функция для добавления буста на фронтике. */
 function add_boost(parent, boost) {
-    const button = document.createElement('button')
+    const button = document.createElement('a')
     button.setAttribute('class', `boost_${boost.type}`)
     button.setAttribute('id', `boost_${boost.id}`)
     button.setAttribute('onclick', `buy_boost(${boost.id})`)
     button.innerHTML = `
-        <img class="mushrooms "src="/static/img/mushrooms/`+random()+`.png">
-        <p>lvl: <span id="boost_level">${boost.level}</span></p>
-        <p>+<span id="boost_power">${boost.power}</span></p>
-        <p><span id="boost_price">${boost.price}</span></p>
+        <div class="mush-div">
+            <img class="mushrooms" src=""><br>
+            <p>lvl - <span id="boost_level">${boost.level}</span></p><br>
+            <p><i class="fa-solid fa-plus"></i> <span id="boost_power">${boost.power}</span> power</p><br>
+            <p><span id="boost_price">${boost.price}</span></p>
+        </div>
     `
     parent.appendChild(button)
 }
@@ -239,8 +241,18 @@ function show_hide_password(target){
 * Эта функция автоматически вызывается сразу после загрузки страницы.
 * В ней мы можем делать что угодно.
 */
+
+function getRandomNumber() {
+    return random(30);
+}
+
 window.onload = function () {
     Game.init() // Инициализация игры.
     setAutoClick() // Инициализация автоклика.
     setAutoSave() // Инициализация автосейва.
+    
+    var mush = document.getElementsByClassName("mushrooms");
+    for (index = 0; index < mush.length; ++index) {
+        mush[index].setAttribute("src", "/static/img/mushrooms/"+ getRandomNumber() +".png");
+    }
 }

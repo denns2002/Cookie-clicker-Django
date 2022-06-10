@@ -1,11 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
 @-webkit-keyframes fallingleft {
   from {
     -webkit-transform: rotate(0deg);
@@ -343,13 +335,13 @@ body {
           animation: infinite linear;
   -webkit-animation-name: fallingright;
           animation-name: fallingright;
-  left: 43%;
-  width: 82px;
-  height: 82px;
-  -webkit-animation-duration: 5296ms;
-          animation-duration: 5296ms;
-  -webkit-animation-delay: 938ms;
-          animation-delay: 938ms;
+  left: 31%;
+  width: 75px;
+  height: 75px;
+  -webkit-animation-duration: 8598ms;
+          animation-duration: 8598ms;
+  -webkit-animation-delay: 616ms;
+          animation-delay: 616ms;
 }
 
 .mushrooms .img-2 {
@@ -357,13 +349,13 @@ body {
           animation: infinite linear;
   -webkit-animation-name: fallingleft;
           animation-name: fallingleft;
-  left: 54%;
+  left: 68%;
   width: 82px;
   height: 82px;
-  -webkit-animation-duration: 10674ms;
-          animation-duration: 10674ms;
-  -webkit-animation-delay: 690ms;
-          animation-delay: 690ms;
+  -webkit-animation-duration: 6136ms;
+          animation-duration: 6136ms;
+  -webkit-animation-delay: 233ms;
+          animation-delay: 233ms;
 }
 
 .mushrooms .img-3 {
@@ -371,41 +363,41 @@ body {
           animation: infinite linear;
   -webkit-animation-name: fallingleft;
           animation-name: fallingleft;
-  left: 21%;
-  width: 73px;
-  height: 73px;
-  -webkit-animation-duration: 10896ms;
-          animation-duration: 10896ms;
-  -webkit-animation-delay: 753ms;
-          animation-delay: 753ms;
+  left: 68%;
+  width: 78px;
+  height: 78px;
+  -webkit-animation-duration: 12539ms;
+          animation-duration: 12539ms;
+  -webkit-animation-delay: 262ms;
+          animation-delay: 262ms;
 }
 
 .mushrooms .img-4 {
   -webkit-animation: infinite linear;
           animation: infinite linear;
-  -webkit-animation-name: fallingright;
-          animation-name: fallingright;
-  left: 44%;
-  width: 89px;
-  height: 89px;
-  -webkit-animation-duration: 5186ms;
-          animation-duration: 5186ms;
-  -webkit-animation-delay: 812ms;
-          animation-delay: 812ms;
+  -webkit-animation-name: fallingleft;
+          animation-name: fallingleft;
+  left: 63%;
+  width: 74px;
+  height: 74px;
+  -webkit-animation-duration: 6924ms;
+          animation-duration: 6924ms;
+  -webkit-animation-delay: 998ms;
+          animation-delay: 998ms;
 }
 
 .mushrooms .img-5 {
   -webkit-animation: infinite linear;
           animation: infinite linear;
-  -webkit-animation-name: fallingright;
-          animation-name: fallingright;
-  left: 33%;
-  width: 83px;
-  height: 83px;
-  -webkit-animation-duration: 11700ms;
-          animation-duration: 11700ms;
-  -webkit-animation-delay: 610ms;
-          animation-delay: 610ms;
+  -webkit-animation-name: fallingleft;
+          animation-name: fallingleft;
+  left: 11%;
+  width: 72px;
+  height: 72px;
+  -webkit-animation-duration: 13709ms;
+          animation-duration: 13709ms;
+  -webkit-animation-delay: 389ms;
+          animation-delay: 389ms;
 }
 
 .mushrooms .img-6 {
@@ -413,13 +405,13 @@ body {
           animation: infinite linear;
   -webkit-animation-name: fallingleft;
           animation-name: fallingleft;
-  left: 58%;
-  width: 77px;
-  height: 77px;
-  -webkit-animation-duration: 9059ms;
-          animation-duration: 9059ms;
-  -webkit-animation-delay: 865ms;
-          animation-delay: 865ms;
+  left: 75%;
+  width: 82px;
+  height: 82px;
+  -webkit-animation-duration: 5020ms;
+          animation-duration: 5020ms;
+  -webkit-animation-delay: 501ms;
+          animation-delay: 501ms;
 }
 
 .mushrooms .img-7 {
@@ -427,13 +419,13 @@ body {
           animation: infinite linear;
   -webkit-animation-name: fallingright;
           animation-name: fallingright;
-  left: 59%;
-  width: 73px;
-  height: 73px;
-  -webkit-animation-duration: 7381ms;
-          animation-duration: 7381ms;
-  -webkit-animation-delay: 935ms;
-          animation-delay: 935ms;
+  left: 6%;
+  width: 89px;
+  height: 89px;
+  -webkit-animation-duration: 5895ms;
+          animation-duration: 5895ms;
+  -webkit-animation-delay: 442ms;
+          animation-delay: 442ms;
 }
 
 .mushrooms .img-8 {
@@ -441,27 +433,27 @@ body {
           animation: infinite linear;
   -webkit-animation-name: fallingleft;
           animation-name: fallingleft;
-  left: 13%;
-  width: 77px;
-  height: 77px;
-  -webkit-animation-duration: 7144ms;
-          animation-duration: 7144ms;
-  -webkit-animation-delay: 72ms;
-          animation-delay: 72ms;
+  left: 84%;
+  width: 83px;
+  height: 83px;
+  -webkit-animation-duration: 5544ms;
+          animation-duration: 5544ms;
+  -webkit-animation-delay: 342ms;
+          animation-delay: 342ms;
 }
 
 .mushrooms .img-9 {
   -webkit-animation: infinite linear;
           animation: infinite linear;
-  -webkit-animation-name: fallingleft;
-          animation-name: fallingleft;
-  left: 7%;
-  width: 77px;
-  height: 77px;
-  -webkit-animation-duration: 9425ms;
-          animation-duration: 9425ms;
-  -webkit-animation-delay: 153ms;
-          animation-delay: 153ms;
+  -webkit-animation-name: fallingright;
+          animation-name: fallingright;
+  left: 87%;
+  width: 85px;
+  height: 85px;
+  -webkit-animation-duration: 8536ms;
+          animation-duration: 8536ms;
+  -webkit-animation-delay: 631ms;
+          animation-delay: 631ms;
 }
 
 .mushrooms .img-10 {
@@ -469,13 +461,13 @@ body {
           animation: infinite linear;
   -webkit-animation-name: fallingleft;
           animation-name: fallingleft;
-  left: 2%;
-  width: 76px;
-  height: 76px;
-  -webkit-animation-duration: 9716ms;
-          animation-duration: 9716ms;
-  -webkit-animation-delay: 971ms;
-          animation-delay: 971ms;
+  left: 81%;
+  width: 78px;
+  height: 78px;
+  -webkit-animation-duration: 6219ms;
+          animation-duration: 6219ms;
+  -webkit-animation-delay: 42ms;
+          animation-delay: 42ms;
 }
 
 .mushrooms .img-11 {
@@ -483,13 +475,13 @@ body {
           animation: infinite linear;
   -webkit-animation-name: fallingright;
           animation-name: fallingright;
-  left: 32%;
-  width: 82px;
-  height: 82px;
-  -webkit-animation-duration: 7853ms;
-          animation-duration: 7853ms;
-  -webkit-animation-delay: 115ms;
-          animation-delay: 115ms;
+  left: 65%;
+  width: 86px;
+  height: 86px;
+  -webkit-animation-duration: 5609ms;
+          animation-duration: 5609ms;
+  -webkit-animation-delay: 108ms;
+          animation-delay: 108ms;
 }
 
 .mushrooms .img-12 {
@@ -497,69 +489,69 @@ body {
           animation: infinite linear;
   -webkit-animation-name: fallingleft;
           animation-name: fallingleft;
-  left: 1%;
-  width: 84px;
-  height: 84px;
-  -webkit-animation-duration: 9139ms;
-          animation-duration: 9139ms;
-  -webkit-animation-delay: 514ms;
-          animation-delay: 514ms;
+  left: 39%;
+  width: 88px;
+  height: 88px;
+  -webkit-animation-duration: 8213ms;
+          animation-duration: 8213ms;
+  -webkit-animation-delay: 122ms;
+          animation-delay: 122ms;
 }
 
 .mushrooms .img-13 {
   -webkit-animation: infinite linear;
           animation: infinite linear;
-  -webkit-animation-name: fallingright;
-          animation-name: fallingright;
-  left: 30%;
-  width: 90px;
-  height: 90px;
-  -webkit-animation-duration: 8950ms;
-          animation-duration: 8950ms;
-  -webkit-animation-delay: 454ms;
-          animation-delay: 454ms;
+  -webkit-animation-name: fallingleft;
+          animation-name: fallingleft;
+  left: 66%;
+  width: 78px;
+  height: 78px;
+  -webkit-animation-duration: 6498ms;
+          animation-duration: 6498ms;
+  -webkit-animation-delay: 369ms;
+          animation-delay: 369ms;
 }
 
 .mushrooms .img-14 {
   -webkit-animation: infinite linear;
           animation: infinite linear;
-  -webkit-animation-name: fallingleft;
-          animation-name: fallingleft;
-  left: 71%;
-  width: 76px;
-  height: 76px;
-  -webkit-animation-duration: 8994ms;
-          animation-duration: 8994ms;
-  -webkit-animation-delay: 83ms;
-          animation-delay: 83ms;
+  -webkit-animation-name: fallingright;
+          animation-name: fallingright;
+  left: 67%;
+  width: 80px;
+  height: 80px;
+  -webkit-animation-duration: 7427ms;
+          animation-duration: 7427ms;
+  -webkit-animation-delay: 639ms;
+          animation-delay: 639ms;
 }
 
 .mushrooms .img-15 {
   -webkit-animation: infinite linear;
           animation: infinite linear;
-  -webkit-animation-name: fallingright;
-          animation-name: fallingright;
-  left: 55%;
-  width: 74px;
-  height: 74px;
-  -webkit-animation-duration: 6534ms;
-          animation-duration: 6534ms;
-  -webkit-animation-delay: 279ms;
-          animation-delay: 279ms;
+  -webkit-animation-name: fallingleft;
+          animation-name: fallingleft;
+  left: 64%;
+  width: 83px;
+  height: 83px;
+  -webkit-animation-duration: 11317ms;
+          animation-duration: 11317ms;
+  -webkit-animation-delay: 208ms;
+          animation-delay: 208ms;
 }
 
 .mushrooms .img-16 {
   -webkit-animation: infinite linear;
           animation: infinite linear;
-  -webkit-animation-name: fallingleft;
-          animation-name: fallingleft;
-  left: 31%;
-  width: 83px;
-  height: 83px;
-  -webkit-animation-duration: 6041ms;
-          animation-duration: 6041ms;
-  -webkit-animation-delay: 642ms;
-          animation-delay: 642ms;
+  -webkit-animation-name: fallingright;
+          animation-name: fallingright;
+  left: 30%;
+  width: 82px;
+  height: 82px;
+  -webkit-animation-duration: 8786ms;
+          animation-duration: 8786ms;
+  -webkit-animation-delay: 763ms;
+          animation-delay: 763ms;
 }
 
 .mushrooms .img-17 {
@@ -567,27 +559,27 @@ body {
           animation: infinite linear;
   -webkit-animation-name: fallingleft;
           animation-name: fallingleft;
-  left: 88%;
-  width: 85px;
-  height: 85px;
-  -webkit-animation-duration: 9337ms;
-          animation-duration: 9337ms;
-  -webkit-animation-delay: 446ms;
-          animation-delay: 446ms;
+  left: 71%;
+  width: 80px;
+  height: 80px;
+  -webkit-animation-duration: 7452ms;
+          animation-duration: 7452ms;
+  -webkit-animation-delay: 494ms;
+          animation-delay: 494ms;
 }
 
 .mushrooms .img-18 {
   -webkit-animation: infinite linear;
           animation: infinite linear;
-  -webkit-animation-name: fallingright;
-          animation-name: fallingright;
-  left: 49%;
-  width: 76px;
-  height: 76px;
-  -webkit-animation-duration: 10491ms;
-          animation-duration: 10491ms;
-  -webkit-animation-delay: 489ms;
-          animation-delay: 489ms;
+  -webkit-animation-name: fallingleft;
+          animation-name: fallingleft;
+  left: 89%;
+  width: 85px;
+  height: 85px;
+  -webkit-animation-duration: 5847ms;
+          animation-duration: 5847ms;
+  -webkit-animation-delay: 517ms;
+          animation-delay: 517ms;
 }
 
 .mushrooms .img-19 {
@@ -595,13 +587,13 @@ body {
           animation: infinite linear;
   -webkit-animation-name: fallingright;
           animation-name: fallingright;
-  left: 45%;
-  width: 75px;
-  height: 75px;
-  -webkit-animation-duration: 7134ms;
-          animation-duration: 7134ms;
-  -webkit-animation-delay: 428ms;
-          animation-delay: 428ms;
+  left: 9%;
+  width: 76px;
+  height: 76px;
+  -webkit-animation-duration: 9947ms;
+          animation-duration: 9947ms;
+  -webkit-animation-delay: 570ms;
+          animation-delay: 570ms;
 }
 
 .mushrooms .img-20 {
@@ -609,11 +601,11 @@ body {
           animation: infinite linear;
   -webkit-animation-name: fallingright;
           animation-name: fallingright;
-  left: 58%;
-  width: 82px;
-  height: 82px;
-  -webkit-animation-duration: 11151ms;
-          animation-duration: 11151ms;
-  -webkit-animation-delay: 900ms;
-          animation-delay: 900ms;
+  left: 72%;
+  width: 77px;
+  height: 77px;
+  -webkit-animation-duration: 6712ms;
+          animation-duration: 6712ms;
+  -webkit-animation-delay: 176ms;
+          animation-delay: 176ms;
 }
