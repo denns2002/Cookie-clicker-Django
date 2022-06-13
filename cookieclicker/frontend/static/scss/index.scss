@@ -9,63 +9,162 @@ html, body, main {
     font-family: 'abs';
 }
 
-aside {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
 
 main {
     height: 100vh;
     width: 100%;
     background: linear-gradient(transparent 33%, rgba(255,255,255,1) 50%);
-}
-
-#coins {
-    font-size: 40px;
-    color: white;
-    text-shadow: 0 0 10px rgba(255,255,0,1);
-}
-
-#btn-img {
-    width: 150px;
-}
-
-#boosts-holder {
-    margin: 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    width: 70%;
-    a {
-        text-decoration: none;
-    }
-    .mush-div {
-        border-radius: 10px;
-        border: 1px solid darkgray;
-        margin: 10px;
-        padding: 10px;
-        width: 200px;
-        box-shadow: 0 0 5px rgba(0,0,0,.4);
-        line-height: .5;
-        i {
-            font-weight: 900;
-        }
-        span {
-            display: inline-block;
-        }
-        img {
-            filter: drop-shadow(-3px 3px 5px rgba(0,0,0, .7));
-            width: 50px;
-            height: 50px;
+    float: left;
+}
+
+nav {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid rgba(0,0,0,.4);
+    #logo {
+        filter: drop-shadow(1px 1px 1px rgba(0,0,0,.2));
+        padding-left: 20px;
+        .logo-img {
+            margin-top: -5px;
+            margin-right: 3px;
+            width: 30px;
             image-rendering: pixelated;
-            margin-bottom: 15px;
+        }
+        .M {
+            font-size: 30px;
+            margin-right: 3px;
+        }
+        color: #FF4F00;
+        .clicker {
+            margin-left: 2px;
+            color: #fff;
+        }
+    }
+    #logout {
+        margin: 13px 0;
+        margin-right: 20px;
+        text-align: right;
+        position: absolute;
+        width: 500px;
+        right: 0;
+        transition: all .5s;
+        a {
+            margin-left: 10px;
+            &:hover {
+                color: yellow;
+            }
         }
     }
 }
 
-#logout {
-    margin: 10px;
+.container {
+    position: relative;
+    margin-top: 20px;
+    width: 30%;
+    padding-bottom: 50px;
+    #coins {
+        font-size: 40px;
+        color: yellow;
+        text-shadow: 0 0 10px orange;
+    }
+    #btn-img {
+        width: 150px;
+    }
+    #click_power {
+        font-size: 24px;
+    }
+    #auto_click_power {
+        font-size: 20px;
+        color: green;
+    }
+}
+
+aside {
+    margin-top: 20px;
+    width: 70%;
+    padding-bottom: 50px;
+    h3 {
+        font-size: 40px;
+    }
+    #boosts-holder {
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        a {
+            text-decoration: none;
+        }
+        .mush-div {
+            position: relative;
+            border-radius: 10px;
+            border: 1px solid darkgray;
+            margin: 10px;
+            padding: 10px;
+            width: auto;
+            box-shadow: 0 0 5px rgba(0,0,0,.4);
+            line-height: .5;
+            background: rgba(255,255,255,.5);
+            z-index: 1;
+            transition: all 1s;
+            &:nth-child(3n+3) {
+                border: 5px solid $login-f;
+            }
+            &:hover {
+                background-color: $login-f;
+            }
+            a {
+                p {
+                    margin: 0;
+                }
+            }
+            p {
+                margin: 0;
+                color: #000;
+            }
+            i {
+                font-weight: 900;
+            }
+            span {
+                display: inline-block;
+            }
+            img {
+                filter: drop-shadow(0 0 3px rgba(0,0,0,.4));
+                width: 50px;
+                height: 50px;
+                image-rendering: pixelated;
+                margin-bottom: 15px;
+                transition: all .5s;
+            }
+            #boost_power, .fa-plus, .power  {
+                margin-top: 10px;
+            }
+            #boost_price {
+                color: orange;
+            }
+            .mushroom-coins {
+                pointer-events: none;
+                overflow: visible;
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                margin-top: 10px;
+                mask: url('../svg/mushroom.svg') no-repeat 100% 100%;
+                background-color: red;
+            }
+        }
+    }
+    
+    #auto {
+        
+        margin-right: 10px;
+        display: inline-block;
+        width: 20px;
+        height: 10px;
+        background: $login-f;
+    }
 }
 
 #sky {
@@ -76,4 +175,34 @@ main {
     top: 0;
     z-index: -1;
     image-rendering: pixelated;
+}
+
+.fall-mush {
+    width: 100%;
+    height: 100%;
+    image-rendering: pixelated;
+}
+
+#footer{
+    z-index: 10;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-weight: 500;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background: #101010;
+    padding: 5px 50px;
+    p, a {
+        margin: 0 10px;
+        display: inline-block;
+        color: #fff;
+        text-decoration: none;
+    }
+    img {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+    }
 }

@@ -42,4 +42,56 @@ $error-shadow: rgba(255,50,50,.2);
     100% {
       transform: translateY(0);
     }
+}
+
+@keyframes shadow-pop-tr {
+    0% {
+      -webkit-box-shadow: 0 0 $gray, 0 0 $gray, 0 0 $gray, 0 0 $gray;
+              box-shadow: 0 0 $gray, 0 0 $gray, 0 0 $gray, 0 0 $gray;
+      -webkit-transform: translateX(0) translateY(0);
+              transform: translateX(0) translateY(0);
+    }
+    100% {
+      -webkit-box-shadow: 1px -1px $gray, 2px -2px $gray, 3px -3px $gray, 4px -4px $gray;
+              box-shadow: 1px -1px $gray, 2px -2px $gray, 3px -3px $gray, 4px -4px $gray;
+      -webkit-transform: translateX(-4px) translateY(4px);
+              transform: translateX(-4px) translateY(4px);
+    }
+}
+
+@keyframes princessfallingr {
+    0% {
+      transform: translateY(0) rotate(0deg);
+    }
+    100% {
+      transform: translateY(100vh) rotate(359deg);
+    }
+}
+
+
+@keyframes princessfallingl {
+    0% {
+      transform: translateY(0) rotate(0deg);
+    }
+    100% {
+      transform: translateY(100vh) rotate(359deg);
+    }
+}
+
+@keyframes swing-in-top-fwd {
+  0% {
+    -webkit-transform: rotateX(-100deg);
+            transform: rotateX(-100deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 0;
   }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 1;
+  }
+}
+

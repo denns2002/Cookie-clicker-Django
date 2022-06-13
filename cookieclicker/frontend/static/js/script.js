@@ -82,12 +82,12 @@ function add_boost(parent, boost) {
     button.setAttribute('id', `boost_${boost.id}`)
     button.setAttribute('onclick', `buy_boost(${boost.id})`)
     button.innerHTML = `
-        <div class="mush-div">
-            <img class="mushrooms" src=""><br>
-            <p>lvl - <span id="boost_level">${boost.level}</span></p><br>
-            <p><i class="fa-solid fa-plus"></i> <span id="boost_power">${boost.power}</span> power</p><br>
-            <p><span id="boost_price">${boost.price}</span></p>
-        </div>
+    <div class="mush-div">
+        <img class="mushrooms" src="/static/img/mushrooms/`+ random(30) +`.png"><br>
+        <p>lvl - <span id="boost_level">${boost.level}</span></p><br>
+        <p><i class="fa-solid fa-plus"></i> <span id="boost_power">${boost.power}</span> <span class="power">power</span></p><br>
+        <p><span id="boost_price">${boost.price}</span> <a href="#" class="mushroom-coins" viewBox="0 0 20 20"></a></p>
+    </div>
     `
     parent.appendChild(button)
 }
@@ -253,6 +253,8 @@ window.onload = function () {
     
     var mush = document.getElementsByClassName("mushrooms");
     for (index = 0; index < mush.length; ++index) {
-        mush[index].setAttribute("src", "/static/img/mushrooms/"+ getRandomNumber() +".png");
+        mush[index].setAttribute("src", "/static/img/mushrooms/"+ random(30) +".png");
     }
 }
+
+
